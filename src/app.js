@@ -16,7 +16,7 @@ app.use(userRouter); //registering our userRouter
 
 //2-  We define our port
 // const port = process.env.PORT;
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 //3-  Then we call on listen
 app.listen(port, () => {
