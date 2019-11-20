@@ -103,11 +103,7 @@ router.delete("/users/:id", cors(), async (req, res) => {
     if (!userToDelete) {
       return res.status(404).send("No user found");
     }
-    res
-      .status(200)
-      .send(
-        `The user with the id ${req.params.id} has been successfully deleted from the database`
-      );
+    res.send(userToDelete);
   } catch (e) {
     res.status(500).send(e.message);
   }
